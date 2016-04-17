@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Google maps form task</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+    <script src="javascript/jquery/dist/jquery.js" charset="utf-8"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3&libraries=places" charset="utf-8"></script>
+    <script src = "javascript/main.js" type="text/javascript"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form id="form" action="index.html" method="post">
+        <span>Name: </span>
+        <input type="text" id="name" required autofocus pattern=".{4,}" title="Four or more characters">
+        <br>
+        <span>Address: </span>
+        <input type="text" id="address" required title="One or more characters">
+        <br>
+        <span>Email: </span>
+        <input type="email" id="email" validate="validate" required>
+        <br>
+        <span>Phone: </span>
+        <input type="tel" id="phone" pattern="[0-9]{10}" data-toggle="tooltip" title="example: 0885726947">
+        <br>
+        <span>Website: </span>
+        <input type="url" id="website" validate="validate">
+        <br>
+        <button id="manuallyLocation" type="button">Find location manually</button>
+        <br>
+        <input id="submitBtn" type="submit" value="Submit">
+        <br>
+      </form>
+      <div id="googleMap" style="width:500px;height:380px;"></div>
+    </div>
+  </body>
+</html>
